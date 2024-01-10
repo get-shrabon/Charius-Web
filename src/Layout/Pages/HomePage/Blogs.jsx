@@ -1,12 +1,18 @@
 import blog1 from "../../../assets/blog1.jpg";
 import blog2 from "../../../assets/blog2.jpg";
 import blog3 from "../../../assets/blog3.jpg";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 const Blogs = () => {
+       useEffect(() => {
+         Aos.init({ duration: 1000 });
+       }, []);
   return (
     <div className="pb-20">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <div className="">
+          <div data-aos="flip-up" className="">
             <img className="w-full rounded-t" src={blog1} alt="" />
             <div className="p-3 border-x border-b border-slate-300 rounded-b">
               <a href="#">
@@ -32,7 +38,7 @@ const Blogs = () => {
               </div>
             </div>
           </div>
-          <div className="">
+          <div data-aos="flip-up" className="">
             <img className="w-full rounded-t" src={blog2} alt="" />
             <div className="p-3 border-x border-b border-slate-300 rounded-b">
               <a href="#">
@@ -58,7 +64,7 @@ const Blogs = () => {
               </div>
             </div>
           </div>
-          <div className="">
+          <div data-aos="flip-up" className="">
             <img className="w-full rounded-t" src={blog3} alt="" />
             <div className="p-3 border-x border-b border-slate-300 rounded-b">
               <a href="#">

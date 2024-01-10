@@ -7,11 +7,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import { FaPlus } from "react-icons/fa";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const CharitySlider = () => {
+      useEffect(() => {
+        Aos.init({ duration: 1000 });
+      }, []);
   return (
-    <div>
-      <Swiper
+    <div className="overflow-x-hidden">
+      <Swiper data-aos="fade-left"
         spaceBetween={10}
         slidesPerView={3}
         loop={true}

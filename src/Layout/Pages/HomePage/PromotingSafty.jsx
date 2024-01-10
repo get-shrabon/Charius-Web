@@ -1,11 +1,16 @@
 import leftSideImg from "../../../assets/compo3.jpg";
-
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 const PromotingSafty = () => {
+        useEffect(() => {
+          Aos.init({ duration: 1000 });
+        }, []);
   return (
-    <div className="pt-20">
+    <div data-aos="zoom-in-up" className="pt-20">
       <div className=" grid grid-cols-1 md:grid-cols-2 ">
         <div className="">
-          <img
+          <img 
             className="w-full h-full object-cover"
             src={leftSideImg}
             alt=""

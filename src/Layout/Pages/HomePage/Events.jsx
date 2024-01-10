@@ -1,12 +1,17 @@
 import { IoIosTimer } from "react-icons/io";
 import { IoLocationOutline } from "react-icons/io5";
-
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import event1 from "../../../assets/event1.jpg";
 import event2 from "../../../assets/event2.jpg";
 import event3 from "../../../assets/event3.jpg";
 const Events = () => {
+       useEffect(() => {
+         Aos.init({ duration: 1000 });
+       }, []);
   return (
-    <div className="py-20 relative z-0">
+    <div data-aos="fade-up" className="py-20 relative z-0">
       <div className="container mx-auto">
         <p className="text-yellow-500 text-3xl text-center">
           Let’s Help Them Together!

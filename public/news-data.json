@@ -2,7 +2,8 @@
   {
     "id": 1,
     "title": "Supporting Education",
-    "description": "Help us provide quality education to underprivileged children.",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi modi, eligendi aliquid numquam sapiente distinctio deleniti corrupti accusantium harum similique dolores sed quia odit repudiandae perspiciatis eveniet magni! Odit, quas. Nam minima minus enim repellendus dignissimos. Delectus necessitatibus labore fuga, sapiente qui sed ea maiores quos officiis corporis expedita soluta ipsa et ad minima odit rem debitis provident voluptatibus doloremque. Delectus beatae reiciendis veritatis error sequi excepturi adipisci numquam mollitia repellendus in laudantium a repellat ullam iusto quod, possimus, debitis deleniti assumenda eos quo atque exercitationem? Ipsa voluptate, deserunt perspiciatis fuga placeat corrupti ipsam fugiat ad commodi aperiam quos officia. Assumenda commodi necessitatibus expedita provident neque odit vitae, accusamus impedit modi.",
+    "author_des": " Ipsa voluptate, deserunt perspiciatis fuga placeat corrupti ipsam fugiat ad commodi aperiam quos officia. Assumenda commodi necessitatibus expedita provident neque odit vitae, accusamus impedit modi. ",
     "image": "../src/assets/news1.jpg",
     "author_img": "../src/assets/newsAuth1.jpg",
     "author_name": "John Doe",
@@ -12,7 +13,8 @@
   {
     "id": 2,
     "title": "Clean Water Initiative",
-    "description": "Contribute to our efforts in providing clean and safe water to communities in need.",
+    "description": "Contribute to our efforts in providing clean and safe water to communities in need.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi modi, eligendi aliquid numquam sapiente distinctio deleniti corrupti accusantium harum similique dolores sed quia odit repudiandae perspiciatis eveniet magni! Odit, quas. Nam minima minus enim repellendus dignissimos. Delectus necessitatibus labore fuga, sapiente qui sed ea maiores quos officiis corporis expedita soluta ipsa et ad minima odit rem debitis provident voluptatibus doloremque. Delectus beatae reiciendis veritatis error sequi excepturi adipisci numquam mollitia repellendus in laudantium a repellat ullam iusto quod, possimus, debitis deleniti assumenda eos quo atque exercitationem? Ipsa voluptate, deserunt perspiciatis fuga placeat corrupti ipsam fugiat ad commodi aperiam quos officia. Assumenda commodi necessitatibus expedita provident neque odit vitae, accusamus impedit modi.",
+    "author_des": " Ipsa voluptate, deserunt perspiciatis fuga placeat corrupti ipsam fugiat ad commodi aperiam quos officia. Assumenda commodi necessitatibus expedita provident neque odit vitae, accusamus impedit modi. ",
     "image": "../src/assets/news2.jpg",
     "author_img": "../src/assets/newsAuth2.jpg",
     "author_name": "Jane Smith",
@@ -22,7 +24,8 @@
   {
     "id": 3,
     "title": "Food for All",
-    "description": "Join us in fighting hunger by supporting our food distribution programs.",
+    "description": "Join us in fighting hunger by supporting our food distribution programs.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi modi, eligendi aliquid numquam sapiente distinctio deleniti corrupti accusantium harum similique dolores sed quia odit repudiandae perspiciatis eveniet magni! Odit, quas. Nam minima minus enim repellendus dignissimos. Delectus necessitatibus labore fuga, sapiente qui sed ea maiores quos officiis corporis expedita soluta ipsa et ad minima odit rem debitis provident voluptatibus doloremque. Delectus beatae reiciendis veritatis error sequi excepturi adipisci numquam mollitia repellendus in laudantium a repellat ullam iusto quod, possimus, debitis deleniti assumenda eos quo atque exercitationem? Ipsa voluptate, deserunt perspiciatis fuga placeat corrupti ipsam fugiat ad commodi aperiam quos officia. Assumenda commodi necessitatibus expedita provident neque odit vitae, accusamus impedit modi.",
+    "author_des": " Ipsa voluptate, deserunt perspiciatis fuga placeat corrupti ipsam fugiat ad commodi aperiam quos officia. Assumenda commodi necessitatibus expedita provident neque odit vitae, accusamus impedit modi. ",
     "image": "../src/assets/news3.jpg",
     "author_img": "../src/assets/newsAuth3.jpg",
     "author_name": "Robert Johnson",
@@ -32,7 +35,8 @@
   {
     "id": 4,
     "title": "Healthcare for Everyone",
-    "description": "Provide essential healthcare services to those who cannot afford it.",
+    "description": "Provide essential healthcare services to those who cannot afford it.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi modi, eligendi aliquid numquam sapiente distinctio deleniti corrupti accusantium harum similique dolores sed quia odit repudiandae perspiciatis eveniet magni! Odit, quas. Nam minima minus enim repellendus dignissimos. Delectus necessitatibus labore fuga, sapiente qui sed ea maiores quos officiis corporis expedita soluta ipsa et ad minima odit rem debitis provident voluptatibus doloremque. Delectus beatae reiciendis veritatis error sequi excepturi adipisci numquam mollitia repellendus in laudantium a repellat ullam iusto quod, possimus, debitis deleniti assumenda eos quo atque exercitationem? Ipsa voluptate, deserunt perspiciatis fuga placeat corrupti ipsam fugiat ad commodi aperiam quos officia. Assumenda commodi necessitatibus expedita provident neque odit vitae, accusamus impedit modi.",
+       "author_des": " Ipsa voluptate, deserunt perspiciatis fuga placeat corrupti ipsam fugiat ad commodi aperiam quos officia. Assumenda commodi necessitatibus expedita provident neque odit vitae, accusamus impedit modi. ",
     "image": "../src/assets/news1.jpg",
     "author_img": "../src/assets/newsAuth1.jpg",
     "author_name": "Emily White",
@@ -42,7 +46,8 @@
   {
     "id": 5,
     "title": "Environmental Conservation",
-    "description": "Support our initiatives for a greener and healthier planet.",
+    "description": "Support our initiatives for a greener and healthier planet.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi modi, eligendi aliquid numquam sapiente distinctio deleniti corrupti accusantium harum similique dolores sed quia odit repudiandae perspiciatis eveniet magni! Odit, quas. Nam minima minus enim repellendus dignissimos. Delectus necessitatibus labore fuga, sapiente qui sed ea maiores quos officiis corporis expedita soluta ipsa et ad minima odit rem debitis provident voluptatibus doloremque. Delectus beatae reiciendis veritatis error sequi excepturi adipisci numquam mollitia repellendus in laudantium a repellat ullam iusto quod, possimus, debitis deleniti assumenda eos quo atque exercitationem? Ipsa voluptate, deserunt perspiciatis fuga placeat corrupti ipsam fugiat ad commodi aperiam quos officia. Assumenda commodi necessitatibus expedita provident neque odit vitae, accusamus impedit modi.",
+       "author_des": " Ipsa voluptate, deserunt perspiciatis fuga placeat corrupti ipsam fugiat ad commodi aperiam quos officia. Assumenda commodi necessitatibus expedita provident neque odit vitae, accusamus impedit modi. ",
     "image": "../src/assets/news2.jpg",
     "author_img": "../src/assets/newsAuth2.jpg",
     "author_name": "Michael Brown",
@@ -52,7 +57,8 @@
   {
     "id": 6,
     "title": "Empowering Women",
-    "description": "Help us empower women through education and skill development programs.",
+    "description": "Help us empower women through education and skill development programs.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi modi, eligendi aliquid numquam sapiente distinctio deleniti corrupti accusantium harum similique dolores sed quia odit repudiandae perspiciatis eveniet magni! Odit, quas. Nam minima minus enim repellendus dignissimos. Delectus necessitatibus labore fuga, sapiente qui sed ea maiores quos officiis corporis expedita soluta ipsa et ad minima odit rem debitis provident voluptatibus doloremque. Delectus beatae reiciendis veritatis error sequi excepturi adipisci numquam mollitia repellendus in laudantium a repellat ullam iusto quod, possimus, debitis deleniti assumenda eos quo atque exercitationem? Ipsa voluptate, deserunt perspiciatis fuga placeat corrupti ipsam fugiat ad commodi aperiam quos officia. Assumenda commodi necessitatibus expedita provident neque odit vitae, accusamus impedit modi.",
+       "author_des": " Ipsa voluptate, deserunt perspiciatis fuga placeat corrupti ipsam fugiat ad commodi aperiam quos officia. Assumenda commodi necessitatibus expedita provident neque odit vitae, accusamus impedit modi. ",
     "image": "../src/assets/news3.jpg",
     "author_img": "../src/assets/newsAuth3.jpg",
     "author_name": "Sophia Garcia",

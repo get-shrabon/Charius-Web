@@ -2,14 +2,19 @@ import { TbTargetArrow } from "react-icons/tb";
 import { FaMountainSun } from "react-icons/fa6";
 import Compo1 from "../../../assets/compotwo1.jpg";
 import Compo2 from "../../../assets/compotwo2.jpg";
-
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 const WellcomeCharius = () => {
+      useEffect(() => {
+        Aos.init({ duration: 1000 });
+      }, []);
   return (
-    <div className="py-20 relative z-0">
+    <div data-aos="zoom-in-up" className="py-20 relative z-0">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-5 md:px-0">
         <div className="relative compo__box">
           <div className="z-10 relative sm-d-none border-[15px] border-white w-[400px]">
-            <img className="w-full" src={Compo1} alt="" />
+            <img data-aos="flip-left" className="w-full" src={Compo1} alt="" />
           </div>
           <div className="relative md:absolute top-0 md:top-20 right-0 z-0 ">
             <img src={Compo2} alt="" />

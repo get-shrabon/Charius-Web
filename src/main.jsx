@@ -4,6 +4,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./Layout/Root/Root";
 import Home from "./Layout/Pages/HomePage/Home";
+import NewsDetails from "./Layout/Pages/NewsDetails/NewsDetails";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/newsDetails/:id",
+        element: <NewsDetails />,
+        loader: () => fetch("news-data.json"),
       },
     ],
   },

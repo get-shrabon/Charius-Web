@@ -1,8 +1,13 @@
 import { PiHandHeart } from "react-icons/pi";
-
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 const HelpRaise = () => {
+     useEffect(() => {
+       Aos.init({ duration: 1000 });
+     }, []);
   return (
-    <div className="py-20">
+    <div data-aos="zoom-in" className="py-20">
       <div className="py-5 help__Compo">
         <div className="container mx-auto bg-[#0c5447c4] p-16 text-center">
           <p className=" text-6xl text-warning mx-auto w-[fit-content]">
