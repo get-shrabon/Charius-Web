@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+body {
+  @apply bg-white;
+}
+header .active {
+  color: rgba(234, 179, 8, 1);
+}
+footer {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("../src/assets/footerBG.jpg");
+}
+.help__Compo {
+  background-image: url("../src/assets/footerBG.jpg");
+}
+p {
+  font-family: "Roboto", sans-serif;
+}
+.banner-title {
+  line-height: 70px !important;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #010038;
+  font-family: "Ubuntu", sans-serif;
+}
+.pulse-animation {
+  animation: pulse-animation 2s infinite;
+}
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+  }
+}
+.zoom-animation {
+  animation: zoom-in-up 20s infinite;
+}
+@keyframes zoom-in-up {
+  0% {
+    background-position: center;
+    transform: scale(1, 1);
+  }
+  50% {
+    background-position: center;
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    background-position: center;
+    transform: scale(1, 1);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .banner-title {
+    line-height: normal !important;
+  }
+  .sm-mx-auto {
+    margin: 0 auto;
+  }
+  .sm-d-none {
+    display: none;
+  }
+  .compo__box::after,
+  .compo__box::before {
+    content: none !important;
+  }
+}
+.theme-btn {
+  color: #fff;
+  padding: 15px 35px;
+  border: 0;
+  text-transform: capitalize;
+  font-family: "Nunito", sans-serif;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 18px;
+  background: linear-gradient(180deg, #ebb011 0%, #ed861d 99.48%);
+  transition: 0.4s all;
+}
+.theme-btn:hover {
+  background: linear-gradient(90deg, #ebb011 0%, #ed861d 99.48%);
+}
+.compo__box::after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background-color: #ed8f1a;
+  position: absolute;
+  bottom: 100px;
+  z-index: 0;
+  left: 100px;
+  border-radius: 50%;
+}
+.compo__box::before {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background-color: #009d81;
+  position: absolute;
+  top: 20px;
+  z-index: 0;
+  right: 100px;
+  border-radius: 50%;
+}
+.event-card:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 52, 43, 0) 48.36%,
+    rgba(0, 39, 32, 0.712623) 78%,
+    #000000 97.64%
+  );
+  border-radius: 20px;
+  transition: all 0.3s;
+  z-index: 11;
+}
+.charity-card:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 52, 43, 0) 48.36%,
+    rgba(0, 39, 32, 0.712623) 78%,
+    #000000 97.64%
+  );
+  border-radius: 20px;
+  transition: all 0.3s;
+  z-index: 11;
+}
+.charity-info {
+  visibility: hidden;
+}
+.charity-card:hover {
+  transform: scale(1.1) !important;
+  translate: calc(-10px);
+}
+.charity-card:hover .charity-info {
+  visibility: visible;
+}
+.date-box::before {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-right: 30px solid #ed861d;
+  border-bottom: 0px solid transparent;
+  top: 0;
+  left: -30px;
+}
+.client-box::after {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 30px solid rgba(228, 183, 3, 0.208);
+  bottom: -30px;
+  left: 30px;
+}
+.client-box {
+  box-shadow: 0px 2px 10px 0px rgba(0, 4, 88, 0.1019607843);
+}
+.data-box-2::before {
+  border-right-color: #017a64;
+}
+.data-box-3::before {
+  border-right-color: #a00407;
+}
+
+.event-card:hover .event-img {
+  scale: calc(1.1);
+}
+.client-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("./assets//clientBG.jpg");
+}
