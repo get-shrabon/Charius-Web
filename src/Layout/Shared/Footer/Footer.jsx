@@ -44,7 +44,7 @@ const Footer = () => {
         <div className="divider"></div>
         <div className="grid gap-5 grid-cols-1 md:grid-cols-4 text-white py-5">
           <div>
-            <h3 className="text-2xl font-bold mb-3">About Charius</h3>
+            <h3 className="text-2xl text-white font-bold mb-3">About Charius</h3>
             <p>
               Purus tellus arcu consequat neque nisl integer fames ac venenatis.
               Neque ornare ut viverra purus suscipit morbi. Lorem pretium purus
@@ -52,7 +52,7 @@ const Footer = () => {
             </p>
           </div>
           <div>
-            <h3 className="text-2xl font-bold mb-3">Quick Links</h3>
+            <h3 className="text-2xl text-white font-bold mb-3">Quick Links</h3>
             <ul className="list-inside list-disc space-y-3">
               <li>
                 <a
@@ -97,7 +97,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h3 className="text-2xl font-bold mb-3">Mission & Vision</h3>
+            <h3 className="text-2xl text-white font-bold mb-3">Mission & Vision</h3>
             <ul className="list-inside list-disc space-y-3">
               <li>
                 <a
@@ -142,7 +142,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h3 className="text-2xl font-bold mb-3">Contact Us</h3>
+            <h3 className="text-2xl text-white font-bold mb-3">Contact Us</h3>
             <p className="mb-3">
               Nulla nequeut molestie interdum nisl ut consequat.
             </p>

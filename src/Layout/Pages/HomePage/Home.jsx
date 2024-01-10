@@ -9,6 +9,8 @@ import DonationMeans from "./DonationMeans";
 import HelpRaise from "./HelpRaise";
 import Events from "./Events";
 import Clients from "./Clients";
+import LatestNews from "./LatestNews";
+import Partners from "./Partners";
 
 const Home = () => {
   return (
@@ -24,6 +26,8 @@ const Home = () => {
       <HelpRaise/>
       <Events/>
       <Clients/>
+      <LatestNews/>
+      <Partners/>
     </div>
   );
 };

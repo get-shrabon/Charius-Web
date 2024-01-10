@@ -7,12 +7,12 @@ import CharitySlider from "./CharitySlider";
 const Clients = () => {
   const [counter, setCounter] = useState(false);
   return (
-    <div className="py-20">
+    <div className="py-20 relative z-0">
       <ScrollTrigger
         onEnter={() => setCounter(true)}
         onExit={() => setCounter(false)}
       >
-        <div className="client-bg bg-no-repeat bg-center bg-cover pt-20 pb-52">
+        <div className="client-bg bg-no-repeat  bg-center bg-cover pt-20 pb-52">
           <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
               <div className="flex items-center gap-3 justify-center">

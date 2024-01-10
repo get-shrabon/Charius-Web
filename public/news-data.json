@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Supporting Education",
+    "description": "Help us provide quality education to underprivileged children.",
+    "image": "../src/assets/news1.jpg",
+    "author_img": "../src/assets/newsAuth1.jpg",
+    "author_name": "John Doe",
+    "comments_number": 23,
+    "publish_date": "2024-01-10"
+  },
+  {
+    "id": 2,
+    "title": "Clean Water Initiative",
+    "description": "Contribute to our efforts in providing clean and safe water to communities in need.",
+    "image": "../src/assets/news2.jpg",
+    "author_img": "../src/assets/newsAuth2.jpg",
+    "author_name": "Jane Smith",
+    "comments_number": 15,
+    "publish_date": "2024-01-11"
+  },
+  {
+    "id": 3,
+    "title": "Food for All",
+    "description": "Join us in fighting hunger by supporting our food distribution programs.",
+    "image": "../src/assets/news3.jpg",
+    "author_img": "../src/assets/newsAuth3.jpg",
+    "author_name": "Robert Johnson",
+    "comments_number": 30,
+    "publish_date": "2024-01-12"
+  },
+  {
+    "id": 4,
+    "title": "Healthcare for Everyone",
+    "description": "Provide essential healthcare services to those who cannot afford it.",
+    "image": "../src/assets/news1.jpg",
+    "author_img": "../src/assets/newsAuth1.jpg",
+    "author_name": "Emily White",
+    "comments_number": 18,
+    "publish_date": "2024-01-13"
+  },
+  {
+    "id": 5,
+    "title": "Environmental Conservation",
+    "description": "Support our initiatives for a greener and healthier planet.",
+    "image": "../src/assets/news2.jpg",
+    "author_img": "../src/assets/newsAuth2.jpg",
+    "author_name": "Michael Brown",
+    "comments_number": 25,
+    "publish_date": "2024-01-14"
+  },
+  {
+    "id": 6,
+    "title": "Empowering Women",
+    "description": "Help us empower women through education and skill development programs.",
+    "image": "../src/assets/news3.jpg",
+    "author_img": "../src/assets/newsAuth3.jpg",
+    "author_name": "Sophia Garcia",
+    "comments_number": 12,
+    "publish_date": "2024-01-15"
+  }
+]
