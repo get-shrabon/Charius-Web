@@ -140,10 +140,10 @@ const Navbar = () => {
                   className="dropdown-content z-[1] menu p-2 shadow bg-white rounded-box w-[fit-content]"
                 >
                   <li>
-                    <Link className="text-black text-nowrap ">Login</Link>
+                    <Link to={`/login`} className="text-black text-nowrap ">Login</Link>
                   </li>
                   <li>
-                    <Link className="text-black text-nowrap ">Sign Up</Link>
+                    <Link to={`/signup`} className="text-black text-nowrap ">Sign Up</Link>
                   </li>
                 </ul>
               </div>
