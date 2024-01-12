@@ -19,6 +19,7 @@ const Navbar = () => {
         <li><NavLink className="uppercase text-slate-700 font-semibold hover:text-yellow-500 duration-500" to="/contact">Contact</NavLink></li>
         </>
     )
+     
   return (
     <Headroom className="z-[999]">
       <header className="bg-white py-3">

@@ -1,14 +1,44 @@
 /* eslint-disable react/no-unescaped-entities */
 import Logo from "../../../assets/logo.png";
 import LoginImg from "../../../assets/login.png";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
 import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
 import { FaFacebookF, FaGoogle, FaTwitter } from "react-icons/fa";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const LoginPage = () => {
   const [showPass, setShowPass] = useState(false);
+  const { userLogin } = useContext(AuthContext);
+    const [errorMessage, setErrorMessage] = useState("");
+    const navigate = useNavigate()
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    const condition = e.target.checkbox.checked;
+    console.log(email, password, condition);
+    // Validation
+    {
+      if (password < 6) {
+        setErrorMessage("Password must be at least 6 characters long");
+        return;
+      } else if (!/[A-Z]/.test(password)) {
+        setErrorMessage("Password must contain at least one uppercase letter");
+        return;
+      } else if (!/[a-z]/.test(password)) {
+        setErrorMessage("Password must contain at least one lowercase letter");
+        return;
+      }
+    }
+    // User Login
+    userLogin(email, password).then(() => {
+      console.log("Login Success");
+      e.target.reset();
+      navigate(`/`)
+    });
+  };
   return (
     <div className="container mx-auto my-20">
       <div className="grid grid-cols-1 md:grid-cols-2 custom-shadow rounded">
@@ -29,7 +59,7 @@ const LoginPage = () => {
           </Link>
         </div>
         <div className="p-10">
-          <form className="space-y-5">
+          <form onSubmit={handleLogin} className="space-y-5">
             <div className="pb-5">
               <h3 className="text-2xl">Login</h3>
               <p className="text-slate-600">Sign into your pages account</p>
@@ -61,6 +91,11 @@ const LoginPage = () => {
                   {showPass ? <IoMdEyeOff /> : <IoMdEye />}
                 </p>
               </div>
+            </div>
+            <div>
+              {errorMessage && (
+                <p className="text-error text-[14px]">{errorMessage}</p>
+              )}
             </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">

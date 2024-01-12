@@ -1,19 +1,91 @@
 /* eslint-disable react/no-unescaped-entities */
 import Logo from "../../../assets/logo.png";
 import LoginImg from "../../../assets/login.png";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
 import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
 import { FaFacebookF, FaGoogle, FaTwitter } from "react-icons/fa";
+import { AuthContext } from "../../../Provider/AuthProvider";
+import { updateProfile } from "firebase/auth";
 
 const SignUp = () => {
   const [showPass, setShowPass] = useState(false);
   const [photoURL, setPhotoURL] = useState("");
+  const [errorMessage, setErrorMessage] = useState("")
   const handlePhotoURL = (e) => {
     setPhotoURL(e.target.value);
   };
-  
+  const { createUser, googleLogin, facebookLogin } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+//   Google Login
+const handleGoogleLogin = () => {
+    googleLogin()
+    .then(() => {
+        console.log("google login success")
+        navigate(`/`)
+    })
+    .catch(error => {
+        setErrorMessage(error.message)
+    })
+}
+//   Facebook Login
+const handleFacebookLogin = () => {
+    facebookLogin()
+      .then(() => {
+        console.log("google login success");
+        navigate(`/`);
+      })
+      .catch((error) => {
+        setErrorMessage(error.message);
+      });
+}
+
+  const handleSignUp = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    const name = e.target.name.value;
+    const condition = e.target.checkbox.checked;
+    console.log(email, password, name, condition, photoURL);
+    // Validation
+        {
+          if (!condition) {
+            setErrorMessage("Please Accept Our Conditions!");
+            return;
+          } else if (password < 6) {
+            setErrorMessage("Password must be at least 6 characters long");
+            return;
+          } else if (!/[A-Z]/.test(password)) {
+            setErrorMessage(
+              "Password must contain at least one uppercase letter"
+            );
+            return;
+          } else if (!/[a-z]/.test(password)) {
+            setErrorMessage(
+              "Password must contain at least one lowercase letter"
+            );
+            return;
+          }
+        }
+    // Create User
+    createUser(email, password)
+      .then((result) => {
+        e.target.reset();
+        navigate(`/login`);
+        updateProfile(result.user, {
+          displayName: `${name}`,
+          photoURL: `${photoURL}`,
+          
+        });
+        console.log(result.user)
+      })
+      .catch((error) => {
+        setErrorMessage(error.message);
+      });
+  };
+
   return (
     <div className="container mx-auto my-20">
       <div className="grid grid-cols-1 md:grid-cols-2 custom-shadow rounded">
@@ -34,7 +106,7 @@ const SignUp = () => {
           </Link>
         </div>
         <div className="p-10">
-          <form className="space-y-5">
+          <form onSubmit={handleSignUp} className="space-y-5">
             <div className="pb-5">
               <h3 className="text-2xl">Create Account</h3>
               <p className="text-slate-600">Sign into your pages account</p>
@@ -45,12 +117,14 @@ const SignUp = () => {
                 className="border-warning border bg-transparent outline-none w-full p-3 rounded text-black "
                 type="name"
                 name="name"
+                required
                 id=""
                 placeholder="Type your name..."
               />
             </div>
+
             <div>
-              <p className="pb-2">Photo URL</p>
+              <p className="pb-2">Photo URL (Optional)</p>
               <input
                 className="border-warning border bg-transparent outline-none w-full p-3 rounded text-black "
                 type="text"
@@ -67,6 +141,7 @@ const SignUp = () => {
                 className="border-warning border bg-transparent outline-none w-full p-3 rounded text-black "
                 type="email"
                 name="email"
+                required
                 id=""
                 placeholder="demo@gmail.com"
               />
@@ -78,6 +153,7 @@ const SignUp = () => {
                   className="border-warning border bg-transparent outline-none w-full p-3 rounded text-black "
                   type={showPass ? "text" : "password"}
                   name="password"
+                  required
                   id=""
                   placeholder="123S@#12"
                 />
@@ -89,6 +165,11 @@ const SignUp = () => {
                 </p>
               </div>
             </div>
+            <div>
+              {errorMessage && (
+                <p className="text-error text-[14px]">{errorMessage}</p>
+              )}
+            </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <input
@@ -98,7 +179,10 @@ const SignUp = () => {
                   id="checkbox"
                 />
                 <label className="cursor-pointer" htmlFor="checkbox">
-                  Remember Me
+                  Accept our{" "}
+                  <a className="underline" href="# ">
+                    Terms and Conditions?
+                  </a>
                 </label>
               </div>
               <Link className="text-yellow-500">Forget Password ?</Link>
@@ -112,7 +196,10 @@ const SignUp = () => {
               <div className="h-1 border-t border-dashed w-full border-slate-400"></div>
             </div>
             <div className="flex items-center gap-3 justify-center">
-              <button className="p-4 rounded-lg bg-[#3B5998] text-white">
+              <button
+                onClick={handleFacebookLogin}
+                className="p-4 rounded-lg bg-[#3B5998] text-white"
+              >
                 {" "}
                 <FaFacebookF />
               </button>
@@ -120,7 +207,10 @@ const SignUp = () => {
                 {" "}
                 <FaTwitter />
               </button>
-              <button className="p-4 rounded-lg bg-slate-300 text-black">
+              <button
+                onClick={handleGoogleLogin}
+                className="p-4 rounded-lg bg-slate-300 text-black"
+              >
                 {" "}
                 <FaGoogle />
               </button>
