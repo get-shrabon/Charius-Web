@@ -40,8 +40,6 @@ const LoginPage = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    const condition = e.target.checkbox.checked;
-    console.log(email, password, condition);
     errorMessage("")
     // Validation
     {
