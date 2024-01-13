@@ -10,15 +10,39 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 
 const LoginPage = () => {
   const [showPass, setShowPass] = useState(false);
-  const { userLogin } = useContext(AuthContext);
-    const [errorMessage, setErrorMessage] = useState("");
-    const navigate = useNavigate()
+  const { userLogin, googleLogin, facebookLogin } = useContext(AuthContext);
+  const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
+
+  //   Google Login
+  const handleGoogleLogin = () => {
+    googleLogin()
+      .then(() => {
+        console.log("google login success");
+        navigate(`/`);
+      })
+      .catch((error) => {
+        setErrorMessage(error.message);
+      });
+  };
+  //   Facebook Login
+  const handleFacebookLogin = () => {
+    facebookLogin()
+      .then(() => {
+        console.log("google login success");
+        navigate(`/`);
+      })
+      .catch((error) => {
+        setErrorMessage(error.message);
+      });
+  };
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     const condition = e.target.checkbox.checked;
     console.log(email, password, condition);
+    errorMessage("")
     // Validation
     {
       if (password < 6) {
@@ -36,7 +60,7 @@ const LoginPage = () => {
     userLogin(email, password).then(() => {
       console.log("Login Success");
       e.target.reset();
-      navigate(`/`)
+      navigate(`/`);
     });
   };
   return (
@@ -120,11 +144,17 @@ const LoginPage = () => {
               <div className="h-1 border-t border-dashed w-full border-slate-400"></div>
             </div>
             <div className="flex items-center gap-3 justify-center">
-              <button className="p-4 rounded-lg bg-[#3B5998] text-white">
+              <button
+                onClick={handleFacebookLogin}
+                className="p-4 rounded-lg bg-[#3B5998] text-white"
+              >
                 {" "}
                 <FaFacebookF />
               </button>
-              <button className="p-4 rounded-lg bg-slate-300 text-black">
+              <button
+                onClick={handleGoogleLogin}
+                className="p-4 rounded-lg bg-slate-300 text-black"
+              >
                 {" "}
                 <FaGoogle />
               </button>

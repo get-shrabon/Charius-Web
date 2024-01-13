@@ -49,6 +49,7 @@ const handleFacebookLogin = () => {
     const name = e.target.name.value;
     const condition = e.target.checkbox.checked;
     console.log(email, password, name, condition, photoURL);
+    errorMessage("")
     // Validation
         {
           if (!condition) {
