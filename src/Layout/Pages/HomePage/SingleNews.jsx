@@ -17,7 +17,7 @@ const SingleNews = ({ data }) => {
     <div className="custom-shadow rounded-lg">
       <div className="p-5">
         <div className="h-[fit-content]  relative">
-          <img className="rounded-t-lg w-full" src={image} alt="" />
+          <img className="rounded-t-lg w-full h-[300px] object-cover" src={image} alt="" />
           <div className="bg-warning px-10 py-5 rounded-r-full w-[fit-content] absolute news-card bottom-3 left-[-15px]">
             <p className="text-white font-semibold">{publish_date}</p>
           </div>
