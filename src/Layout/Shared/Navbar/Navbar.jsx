@@ -4,22 +4,61 @@ import { FaBarsStaggered, FaHeart } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 import { GoSearch } from "react-icons/go";
 import { CgProfile } from "react-icons/cg";
-import logo from "../../../assets/logo.svg"
-
-
-
+import logo from "../../../assets/logo.svg";
+import { useContext } from "react";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Navbar = () => {
-    const Links = (
-        <>
-        <li><NavLink className="uppercase text-slate-700 font-semibold hover:text-yellow-500 duration-500" to="/">Home</NavLink></li>
-        <li><NavLink className="uppercase text-slate-700 font-semibold hover:text-yellow-500 duration-500" to="/donations">Donations</NavLink></li>
-        <li><NavLink className="uppercase text-slate-700 font-semibold hover:text-yellow-500 duration-500" to="/events">Events</NavLink></li>
-        <li><NavLink className="uppercase text-slate-700 font-semibold hover:text-yellow-500 duration-500" to="/blog">Blog</NavLink></li>
-        <li><NavLink className="uppercase text-slate-700 font-semibold hover:text-yellow-500 duration-500" to="/contact">Contact</NavLink></li>
-        </>
-    )
-     
+  const Links = (
+    <>
+      <li>
+        <NavLink
+          className="uppercase text-slate-700 font-semibold hover:text-yellow-500 duration-500"
+          to="/"
+        >
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className="uppercase text-slate-700 font-semibold hover:text-yellow-500 duration-500"
+          to="/donations"
+        >
+          Donations
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className="uppercase text-slate-700 font-semibold hover:text-yellow-500 duration-500"
+          to="/events"
+        >
+          Events
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className="uppercase text-slate-700 font-semibold hover:text-yellow-500 duration-500"
+          to="/blog"
+        >
+          Blog
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className="uppercase text-slate-700 font-semibold hover:text-yellow-500 duration-500"
+          to="/contact"
+        >
+          Contact
+        </NavLink>
+      </li>
+    </>
+  );
+  const { user, LogOut } = useContext(AuthContext);
+  // User LogOut
+  const handleLogOut = () => {
+    LogOut()
+  }
+
   return (
     <Headroom className="z-[999]">
       <header className="bg-white py-3">
@@ -134,18 +173,32 @@ const Navbar = () => {
 
               <div className="dropdown dropdown-end ">
                 <div tabIndex={0} role="button" className="text-3xl">
-                  <CgProfile />
+                  {user?.photoURL ? (
+                    <img className="rounded-full w-10 h-10 object-cover" src={user.photoURL} alt="" />
+                  ) : (
+                    <CgProfile />
+                  )}
                 </div>
                 <ul
                   tabIndex={0}
                   className="dropdown-content z-[1] menu p-2 shadow bg-white rounded-box w-[fit-content]"
                 >
                   <li>
-                    <Link to={`/login`} className="text-black text-nowrap ">Login</Link>
+                    <Link to={`/signup`} className="text-black text-nowrap ">
+                      Sign Up
+                    </Link>
                   </li>
-                  <li>
-                    <Link to={`/signup`} className="text-black text-nowrap ">Sign Up</Link>
-                  </li>
+                  {user ? (
+                    <button onClick={handleLogOut} className="btn btn-warning text-nowrap">
+                      Log Out
+                    </button>
+                  ) : (
+                    <li>
+                      <Link to={`/login`} className="text-black text-nowrap ">
+                        Login
+                      </Link>
+                    </li>
+                  )}
                 </ul>
               </div>
               <div className="sm-d-none hidden lg:flex">

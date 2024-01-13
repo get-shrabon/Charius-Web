@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
-import { FaFacebookF, FaGoogle, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../../Provider/AuthProvider";
 
 const LoginPage = () => {
@@ -123,10 +123,6 @@ const LoginPage = () => {
               <button className="p-4 rounded-lg bg-[#3B5998] text-white">
                 {" "}
                 <FaFacebookF />
-              </button>
-              <button className="p-4 rounded-lg bg-[#55ACEE] text-white">
-                {" "}
-                <FaTwitter />
               </button>
               <button className="p-4 rounded-lg bg-slate-300 text-black">
                 {" "}
