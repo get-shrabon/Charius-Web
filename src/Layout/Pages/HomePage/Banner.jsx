@@ -8,7 +8,7 @@ import BannerSlide from "./BannerSlide";
 
 const Banner = () => {
   return (
-    <div>
+    <div className="relative z-0">
       <div className="container mx-auto py-16">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 px-5 md:px-0 ">
           <div className="pt-0 2xl:pt-20">
@@ -72,7 +72,7 @@ const Banner = () => {
                 src={banner1}
                 alt=""
               />
-              <div className="w-[400px] 2xl:w-[600px] rounded-full z-0 relative sm-mx-auto overflow-hidden right-0 ms-auto top-[-100px] md:top-[-150px] 2xl:top-[-250px]">
+              <div className="w-[300px] lg:w-[500px] 2xl:w-[600px] rounded-full z-0 relative sm-mx-auto overflow-hidden right-0 ms-auto top-[-100px] md:top-[-150px] 2xl:top-[-250px]">
                 <img className="  zoom-animation" src={banner2} alt="" />
               </div>
             </div>

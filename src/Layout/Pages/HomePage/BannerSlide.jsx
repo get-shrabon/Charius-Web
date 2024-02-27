@@ -19,8 +19,9 @@ const BannerSlide = () => {
         loop={true}
         className="overflow-x-hidden w-[250px]"
       >
-        <SwiperSlide>
-          <img src={vol1} className="rounded-full border p-1" alt="" />
+        <SwiperSlide >
+          <img
+            src={vol1} className="rounded-full border p-1" alt="" />
         </SwiperSlide>
         <SwiperSlide>
           <img src={vol2} className="rounded-full border p-1" alt="" />

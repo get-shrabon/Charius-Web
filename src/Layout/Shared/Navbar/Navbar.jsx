@@ -60,20 +60,20 @@ const Navbar = () => {
   }
 
   return (
-    <Headroom className="z-[999]">
+    <Headroom className="z-[99999]">
       <header className="bg-white py-3">
         <div className="container mx-auto px-3 md:px-0">
           <div className="flex items-center justify-between ">
             <div className="navbar-logo">
               <a href="/">
-                <img className="" src={logo} alt="" />
+                <img className="md:w-auto w-[100px]" src={logo} alt="Logo" />
               </a>
             </div>
             <div className=" hidden lg:flex">
               <ul className="flex items-center gap-5">{Links}</ul>
             </div>
             <div className="flex items-center gap-5">
-              <div className="drawer lg:hidden">
+              <div className="drawer w-[fit-content] lg:hidden">
                 <input
                   id="my-drawer"
                   type="checkbox"

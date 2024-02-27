@@ -6,6 +6,9 @@
 body {
   @apply bg-white;
 }
+#root {
+  overflow-x: hidden;
+}
 header .active {
   color: rgba(234, 179, 8, 1);
 }
@@ -194,7 +197,7 @@ h6 {
 .client-box {
   box-shadow: 0px 2px 10px 0px rgba(0, 4, 88, 0.1019607843);
 }
-.custom-shadow{
+.custom-shadow {
   box-shadow: 0px 2px 10px 0px rgba(0, 4, 88, 0.1019607843);
 }
 .news-card2::after {
@@ -217,6 +220,7 @@ h6 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("./assets//clientBG.jpg");
 }
-.news-detail-banner{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./assets/newsBanner.jpg");
+.news-detail-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("./assets/newsBanner.jpg");
 }
